@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Login_System_Tut_ecnrypted
 {
-    static class Program
+    static class programm
     {
         /// <summary>
         /// The main entry point for the application.

@@ -13,9 +13,9 @@ using System.IO;
 
 namespace Login_System_Tut_ecnrypted
 {
-    public partial class RegForm : Form
+    public partial class regform : Form
     {
-        public RegForm()
+        public regform()
         {
             InitializeComponent();
         }

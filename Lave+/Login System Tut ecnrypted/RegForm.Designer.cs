@@ -1,6 +1,6 @@
 ﻿namespace Login_System_Tut_ecnrypted
 {
-    partial class RegForm
+    partial class regform
     {
         /// <summary>
         /// Required designer variable.

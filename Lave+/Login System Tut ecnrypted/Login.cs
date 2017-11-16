@@ -22,7 +22,7 @@ namespace Login_System_Tut_ecnrypted
 
         private void button2_Click(object sender, EventArgs e)
         {
-            RegForm rf = new RegForm();
+            regform rf = new regform();
             rf.Show();
         }
 
