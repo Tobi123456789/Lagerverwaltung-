@@ -30,6 +30,8 @@ namespace Login_System_Tut_ecnrypted
             if (usrTxt.Text.Length < 3 || passTxt.Text.Length < 5)
             {
                 MessageBox.Show("Falscher Benutzername oder Passwort");
+                regform rf = new regform();
+                rf.Show();
             }
             else
             {

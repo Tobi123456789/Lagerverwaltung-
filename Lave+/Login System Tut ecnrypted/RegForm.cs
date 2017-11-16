@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 using AesEncDec;
 using System.IO;
@@ -29,17 +30,30 @@ namespace Login_System_Tut_ecnrypted
             else
             {
                 string dir = txt_username.Text;
+                int recht=0;
                 Directory.CreateDirectory("data\\" + dir);
-
-                var sw = new StreamWriter("data\\" + dir + "\\data.ls");
-
+                if (cb_administrator.Checked==true)
+                    {
+                    recht = 1;
+                    }
+                else
+                {
+                }
                 string encusr = AesCryp.Encrypt(txt_username.Text);
                 string encpass = AesCryp.Encrypt(txt_passwort.Text);
-
-                sw.WriteLine(encusr);
-                sw.WriteLine(encpass);
-                sw.Close();
-
+                SqlConnection con = new SqlConnection("user id=team06;password=T3amO6;server=eduweb.kb.local;database=team06;");
+                SqlCommand com1 = new SqlCommand("INSERT INTO User(benutzername, passwort, recht) " +
+                                     "Values ('enrusr', 'encpass', 'recht')", con);
+                try
+                {
+                    con.Open();
+                    com1.ExecuteNonQuery();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(""+ex);
+                }              
                 MessageBox.Show("Benutzer '" + dir + "' wurde erstellt!", txt_username.Text);
                 this.Close();
             }
