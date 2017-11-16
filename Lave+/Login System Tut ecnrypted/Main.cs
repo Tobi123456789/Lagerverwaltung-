@@ -22,5 +22,11 @@ namespace Login_System_Tut_ecnrypted
             // TODO: Diese Codezeile lädt Daten in die Tabelle "lagerverwaltungDataSet.Lager". Sie können sie bei Bedarf verschieben oder entfernen.
             this.lagerTableAdapter.Fill(this.lagerverwaltungDataSet.Lager);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            regform rf = new regform();
+            rf.Show();
+        }
     }
 }
