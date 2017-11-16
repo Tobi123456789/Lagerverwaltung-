@@ -51,7 +51,7 @@ namespace Login_System_Tut_ecnrypted
                     if (decusr == usrTxt.Text && decpass == passTxt.Text)
                     {
                         MessageBox.Show("Welcome {0} to the private area!", decusr);
-                        Main main = new Main();
+                        main main = new main();
                         main.Show();
                     }
                     else
