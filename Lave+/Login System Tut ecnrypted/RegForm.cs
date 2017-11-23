@@ -39,9 +39,15 @@ namespace Login_System_Tut_ecnrypted
                 else
                 {
                 }
+
+                LagerverwaltungEntities le = new LagerverwaltungEntities();
+
+                le.SaveChanges();
+
                 string encusr = AesCryp.Encrypt(txt_username.Text);
                 string encpass = AesCryp.Encrypt(txt_passwort.Text);
-                SqlConnection con = new SqlConnection("user id=team06;password=T3amO6;server=eduweb.kb.local;database=team06;");
+                
+                /*SqlConnection con = new SqlConnection("user id=team06;password=T3amO6;server=eduweb.kb.local;database=team06;");
                 SqlCommand com1 = new SqlCommand("INSERT INTO User(benutzername, passwort, recht) " +
                                      "Values ('enrusr', 'encpass', 'recht')", con);
                 try
@@ -55,7 +61,7 @@ namespace Login_System_Tut_ecnrypted
                     MessageBox.Show(""+ex);
                 }              
                 MessageBox.Show("Benutzer '" + dir + "' wurde erstellt!", txt_username.Text);
-                this.Close();
+                this.Close();*/
             }
         }
 
