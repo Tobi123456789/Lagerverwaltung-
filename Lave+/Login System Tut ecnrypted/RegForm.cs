@@ -40,9 +40,13 @@ namespace Login_System_Tut_ecnrypted
                 {
                 }
 
-                LagerverwaltungEntities le = new LagerverwaltungEntities();
+                Entity en = new Entity();
+                User usr = new User();
+                lager la = new lager();
+                la.Lagerbestand = 2;
 
-                le.SaveChanges();
+                en.lager.SaveChanges();
+                en.lager.dispose();
 
                 string encusr = AesCryp.Encrypt(txt_username.Text);
                 string encpass = AesCryp.Encrypt(txt_passwort.Text);
