@@ -31,7 +31,6 @@ namespace Login_System_Tut_ecnrypted
             {
                 string dir = txt_username.Text;
                 int recht=0;
-                Directory.CreateDirectory("data\\" + dir);
                 if (cb_administrator.Checked==true)
                     {
                     recht = 1;
@@ -40,32 +39,21 @@ namespace Login_System_Tut_ecnrypted
                 {
                 }
 
-                Entity en = new Entity();
-                User usr = new User();
-                lager la = new lager();
-                la.Lagerbestand = 2;
-
-                en.lager.SaveChanges();
-                en.lager.dispose();
-
                 string encusr = AesCryp.Encrypt(txt_username.Text);
                 string encpass = AesCryp.Encrypt(txt_passwort.Text);
-                
-                /*SqlConnection con = new SqlConnection("user id=team06;password=T3amO6;server=eduweb.kb.local;database=team06;");
-                SqlCommand com1 = new SqlCommand("INSERT INTO User(benutzername, passwort, recht) " +
-                                     "Values ('enrusr', 'encpass', 'recht')", con);
-                try
-                {
-                    con.Open();
-                    com1.ExecuteNonQuery();
-                    con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(""+ex);
-                }              
+
+                Entity en = new Entity();
+                User usr = new User();       //usr als objekt der klasse User
+                lager la = new lager();      //same
+
+                usr.benutzername = encusr;
+                usr.passwort = encpass;
+
+                en.User.SaveChanges();
+                en.User.dispose();
+       
                 MessageBox.Show("Benutzer '" + dir + "' wurde erstellt!", txt_username.Text);
-                this.Close();*/
+                this.Close();
             }
         }
 
