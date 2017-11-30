@@ -13,10 +13,10 @@ namespace Login_System_Tut_ecnrypted
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entity : DbContext
+    public partial class team06Entities : DbContext
     {
-        public Entity()
-            : base("name=Entity")
+        public team06Entities()
+            : base("name=team06Entities")
         {
         }
     

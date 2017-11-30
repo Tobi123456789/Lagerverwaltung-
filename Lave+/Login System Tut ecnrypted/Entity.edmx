@@ -58,7 +58,7 @@
           <Property Name="passwort" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="recht" Type="Boolean" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="Entity" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="team06Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="lager" EntityType="Self.lager" />
           <EntitySet Name="User" EntityType="Self.User" />
         </EntityContainer>
@@ -67,7 +67,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="team06ModelStoreContainer" CdmEntityContainer="Entity">
+        <EntityContainerMapping StorageEntityContainer="team06ModelStoreContainer" CdmEntityContainer="team06Entities">
           <EntitySetMapping Name="lager">
             <EntityTypeMapping TypeName="team06Model.lager">
               <MappingFragment StoreEntitySet="lager">

@@ -108,14 +108,13 @@
             // 
             // cb_administrator
             // 
-            this.cb_administrator.AutoSize = true;
-            this.cb_administrator.Location = new System.Drawing.Point(337, 98);
+            this.cb_administrator.Location = new System.Drawing.Point(337, 95);
             this.cb_administrator.Name = "cb_administrator";
-            this.cb_administrator.Size = new System.Drawing.Size(15, 14);
-            this.cb_administrator.TabIndex = 13;
-            this.cb_administrator.UseVisualStyleBackColor = true;
+            this.cb_administrator.Size = new System.Drawing.Size(95, 16);
+            this.cb_administrator.TabIndex = 0;
+            this.cb_administrator.CheckedChanged += new System.EventHandler(this.cb_administrator_CheckedChanged);
             // 
-            // RegForm
+            // regform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,7 +128,7 @@
             this.Controls.Add(this.lbl_passwort);
             this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.bn_user_anlegen);
-            this.Name = "RegForm";
+            this.Name = "regform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User anlegen";
             this.ResumeLayout(false);
