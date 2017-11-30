@@ -44,14 +44,14 @@
             this.txt_passwort.Location = new System.Drawing.Point(264, 46);
             this.txt_passwort.Name = "txt_passwort";
             this.txt_passwort.Size = new System.Drawing.Size(115, 20);
-            this.txt_passwort.TabIndex = 8;
+            this.txt_passwort.TabIndex = 2;
             // 
             // txt_username
             // 
             this.txt_username.Location = new System.Drawing.Point(264, 20);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(115, 20);
-            this.txt_username.TabIndex = 9;
+            this.txt_username.TabIndex = 1;
             // 
             // lbl_passwort
             // 
@@ -76,7 +76,7 @@
             this.bn_user_anlegen.Location = new System.Drawing.Point(256, 144);
             this.bn_user_anlegen.Name = "bn_user_anlegen";
             this.bn_user_anlegen.Size = new System.Drawing.Size(75, 23);
-            this.bn_user_anlegen.TabIndex = 4;
+            this.bn_user_anlegen.TabIndex = 5;
             this.bn_user_anlegen.Text = "Registrieren";
             this.bn_user_anlegen.UseVisualStyleBackColor = true;
             this.bn_user_anlegen.Click += new System.EventHandler(this.button2_Click);
@@ -86,7 +86,7 @@
             this.txt_passwort_wh.Location = new System.Drawing.Point(264, 72);
             this.txt_passwort_wh.Name = "txt_passwort_wh";
             this.txt_passwort_wh.Size = new System.Drawing.Size(115, 20);
-            this.txt_passwort_wh.TabIndex = 10;
+            this.txt_passwort_wh.TabIndex = 3;
             // 
             // lbl_passwort_wh
             // 
@@ -94,7 +94,7 @@
             this.lbl_passwort_wh.Location = new System.Drawing.Point(145, 72);
             this.lbl_passwort_wh.Name = "lbl_passwort_wh";
             this.lbl_passwort_wh.Size = new System.Drawing.Size(113, 13);
-            this.lbl_passwort_wh.TabIndex = 11;
+            this.lbl_passwort_wh.TabIndex = 8;
             this.lbl_passwort_wh.Text = "Passwort wiederholen:";
             // 
             // lbl_administrator
@@ -103,7 +103,7 @@
             this.lbl_administrator.Location = new System.Drawing.Point(261, 95);
             this.lbl_administrator.Name = "lbl_administrator";
             this.lbl_administrator.Size = new System.Drawing.Size(70, 13);
-            this.lbl_administrator.TabIndex = 12;
+            this.lbl_administrator.TabIndex = 9;
             this.lbl_administrator.Text = "Administrator:";
             // 
             // cb_administrator
@@ -111,7 +111,7 @@
             this.cb_administrator.Location = new System.Drawing.Point(337, 95);
             this.cb_administrator.Name = "cb_administrator";
             this.cb_administrator.Size = new System.Drawing.Size(95, 16);
-            this.cb_administrator.TabIndex = 0;
+            this.cb_administrator.TabIndex = 4;
             this.cb_administrator.CheckedChanged += new System.EventHandler(this.cb_administrator_CheckedChanged);
             // 
             // regform
