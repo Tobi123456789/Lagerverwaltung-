@@ -29,23 +29,21 @@ namespace Login_System_Tut_ecnrypted
         {
             if (usrTxt.Text.Length < 3 || passTxt.Text.Length < 5)
             {
-                MessageBox.Show("Falscher Benutzername oder Passwort");  
+                MessageBox.Show("Falscher Benutzername oder Passwort");
+                regform reg = new regform();
+                reg.Show();
             }
             else
             {
                 string dir = usrTxt.Text;
-                if (!Directory.Exists("data\\" + dir))
-                    MessageBox.Show("User {0} was not found!", dir);
-                else
-                {
-                    var sr = new StreamReader("data\\" + dir + "\\data.ls");
+                User usr = new User();
 
-                    string encusr = sr.ReadLine();
-                    string encpass = sr.ReadLine();
-                    sr.Close();
+                string encusr = usr.benutzername;
+                string encpass = usr.passwort;
+                bool recht = usr.recht;
 
-                    string decusr = AesCryp.Decrypt(encusr);
-                    string decpass = AesCryp.Decrypt(encpass);
+                string decusr = AesCryp.Decrypt(encusr);
+                string decpass = AesCryp.Decrypt(encpass);
 
                     if (decusr == usrTxt.Text && decpass == passTxt.Text)
                     {
@@ -57,14 +55,7 @@ namespace Login_System_Tut_ecnrypted
                     {
                         MessageBox.Show("Error user or password is wrong!");
                     }
-
                 }
             }
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
-}
