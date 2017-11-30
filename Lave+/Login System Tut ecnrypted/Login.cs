@@ -61,5 +61,10 @@ namespace Login_System_Tut_ecnrypted
                 }
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
